@@ -20,6 +20,10 @@ header {
   z-index: 1000;
 }
 
+html {
+  scroll-padding-top: 160px; /* altura do header fixo */
+}
+
 button.tab {
   flex: 1 1 45%;
   margin: 5px;
