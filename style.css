@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9f9f9;
   color: #222;
   scroll-behavior: smooth;
@@ -20,15 +20,12 @@ header {
   z-index: 1000;
 }
 
-html {
-  scroll-padding-top: 160px; /* altura do header fixo */
-}
-
 button.tab {
   flex: 1 1 45%;
   margin: 5px;
   padding: 25px 10px;
   font-size: 1.2em;
+  font-weight: bold;
   border: 2px solid #999;
   border-radius: 12px;
   background-color: #e0e0e0;
@@ -43,24 +40,14 @@ button.tab:hover {
 }
 
 main {
-  padding-top: 160px; /* espaço pro header fixo */
+  padding-top: 160px; /* altura do header fixo */
   max-width: 700px;
   margin: auto;
 }
 
 section {
-  position: relative;
   margin-bottom: 60px;
   padding: 0 20px;
-}
-
-section::before {
-  content: "";
-  display: block;
-  height: 160px;        /* altura do header fixo */
-  margin-top: -160px;   /* negativo da altura para puxar o scroll antes */
-  visibility: hidden;
-  pointer-events: none; /* para evitar interação */
 }
 
 section h2 {
@@ -76,4 +63,12 @@ section ul {
 section ul li {
   margin-bottom: 10px;
   font-size: 1.1em;
+}
+
+/* Classe para espaçamento das âncoras */
+.anchor {
+  display: block;
+  position: relative;
+  top: -160px; /* mesma altura do header */
+  visibility: hidden;
 }
