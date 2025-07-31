@@ -1,12 +1,71 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colinha do Apresentador</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bem-vindo ao Show de Prêmios!</h1>
-    <p>Esta é a página inicial do nosso projeto.</p>
+  <header>
+    <button class="tab" onclick="location.href='#geral'">🎉 Geral</button>
+    <button class="tab" onclick="location.href='#premios'">🏆 Prêmios</button>
+    <button class="tab" onclick="location.href='#patrocinadores'">🤝 Patrocinadores</button>
+    <button class="tab" onclick="location.href='#frases'">🎙️ Frases Prontas</button>
+  </header>
+
+  <main>
+    <section id="geral">
+      <h2>Informações Gerais</h2>
+      <p><strong>Evento:</strong> Show de Prêmios – Paróquia Sant’Ana de Lavras</p>
+      <p><strong>Data:</strong> 02 de agosto de 2025</p>
+      <p><strong>Pároco:</strong> Pe. Túlio Marcos</p>
+    </section>
+
+    <section id="premios">
+      <h2>Prêmios por Rodada</h2>
+      <ul>
+        <li>1ª Rodada – R$ 2.000</li>
+        <li>2ª Rodada – R$ 3.000</li>
+        <li>3ª Rodada – R$ 10.000</li>
+        <li>4ª Rodada – R$ 15.000</li>
+      </ul>
+    </section>
+
+    <section id="patrocinadores">
+      <h2>Patrocinadores</h2>
+      <ul>
+        <li>Expresso Nepomuceno</li>
+        <li>Supermercados REX</li>
+        <li>Ciclope Automotive</li>
+        <li>Construtora Gomes Pimentel</li>
+        <li>Posto Castelo</li>
+        <li>Santa Cecília Imóveis</li>
+        <li>Fazenda da Limeira</li>
+        <li>Rotiê Imóveis</li>
+        <li>Auto Socorro Juliano Carvalho</li>
+        <li>Granja São Jorge</li>
+        <li>Vitória Lar</li>
+        <li>Joalheria Mesquita</li>
+        <li>Crol 3D</li>
+        <li>Soupin Ambientes</li>
+        <li>Rádio 94.7 FM</li>
+      </ul>
+    </section>
+
+    <section id="frases">
+      <h2>Frases Prontas</h2>
+      <ul>
+        <li><strong>Abertura:</strong> “Boa noite, Lavras! Sejam todos muito bem-vindos ao nosso Show de Prêmios da Paróquia Sant’Ana!”</li>
+        <li><strong>Prêmios:</strong> “E a rodada mais esperada... R$ 15.000 na última chance de hoje!”</li>
+        <li><strong>Agradecimento:</strong> “Esse evento só acontece graças aos nossos patrocinadores. Muito obrigado!”</li>
+        <li><strong>Chamada:</strong> “Fique de olho na sua cartela, o próximo número pode ser o seu!”</li>
+        <li><strong>Suspense:</strong> “Será que é agora que sai o prêmio?”</li>
+        <li><strong>Ganhador:</strong> “Temos ganhador! Parabéns!!”</li>
+        <li><strong>Problema:</strong> “Problemas técnicos? Um minutinho que a gente resolve!”</li>
+        <li><strong>Encerramento:</strong> “Fiquem com Deus, boa noite e até a próxima!”</li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
