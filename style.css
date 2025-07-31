@@ -20,14 +20,6 @@ header {
   z-index: 1000;
 }
 
-section::before {
-  content: "";
-  display: block;
-  height: 160px;  /* mesma altura do header */
-  margin-top: -160px;
-  visibility: hidden;
-}
-
 html {
   scroll-padding-top: 160px; /* altura do header fixo */
 }
@@ -57,8 +49,18 @@ main {
 }
 
 section {
+  position: relative;
   margin-bottom: 60px;
   padding: 0 20px;
+}
+
+section::before {
+  content: "";
+  display: block;
+  height: 160px;        /* altura do header fixo */
+  margin-top: -160px;   /* negativo da altura para puxar o scroll antes */
+  visibility: hidden;
+  pointer-events: none; /* para evitar interação */
 }
 
 section h2 {
