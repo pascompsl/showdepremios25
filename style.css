@@ -7,27 +7,40 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f9f9f9;
-  color: #222;
+  background: #f4f4f8;
+  color: #1c1c1c;
   scroll-behavior: smooth;
   min-height: 100vh;
   position: relative;
-  padding-bottom: 70px; /* espaço para o rodapé fixo */
+  padding-bottom: 80px; /* espaço para o rodapé fixo */
 }
 
+/* Conteúdo principal */
 main {
-  max-width: 700px;
-  margin: 20px auto 0 auto;
-  padding: 0 20px;
+  max-width: 720px;
+  margin: 30px auto;
+  padding: 0 24px;
 }
 
 section {
-  margin-bottom: 60px;
+  margin-bottom: 64px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+section:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 section h2 {
-  font-size: 1.6em;
-  margin-bottom: 15px;
+  font-size: 1.8em;
+  color: #333;
+  border-left: 6px solid #ffb703;
+  padding-left: 12px;
+  margin-bottom: 20px;
 }
 
 ul {
@@ -35,45 +48,66 @@ ul {
 }
 
 ul li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-size: 1.1em;
+  line-height: 1.6;
 }
 
-/* Espaços para âncoras, para compensar os botões fixos no rodapé */
+/* Espaços para âncoras */
 .anchor {
   display: block;
   position: relative;
-  top: -60px; /* altura aproximada do rodapé */
+  top: -70px;
   visibility: hidden;
 }
 
 /* Rodapé fixo com botões */
 footer {
   position: fixed;
-  bottom: 10px;
+  bottom: 12px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid #ccc;
-  border-radius: 30px;
-  padding: 8px 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  background: #ffffffcc;
+  backdrop-filter: blur(8px);
+  border: 1px solid #ddd;
+  border-radius: 40px;
+  padding: 10px 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   display: flex;
-  gap: 12px;
+  gap: 14px;
   z-index: 10000;
 }
 
 footer button {
-  background: #e0e0e0;
+  background: linear-gradient(145deg, #f0f0f0, #ffffff);
   border: none;
   border-radius: 25px;
-  padding: 10px 14px;
-  font-size: 1.1em;
+  padding: 10px 16px;
+  font-size: 1.05em;
+  color: #333;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-  min-width: 60px;
+  transition: all 0.2s ease;
+  min-width: 70px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 footer button:hover {
-  background: #cfcfcf;
+  background: #ffe8b5;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Estilo para destaque do anúncio principal */
+section.highlight {
+  background: #fff8e1;
+  border: 2px dashed #ffb703;
+  color: #5a4100;
+}
+
+section.highlight h2 {
+  color: #bb3e03;
+}
+
+section.highlight ul li::before {
+  content: "🎯 ";
 }
